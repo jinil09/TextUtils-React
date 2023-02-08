@@ -1,16 +1,16 @@
 
-import { useInsertionEffect, useState } from 'react';
+import { useState } from 'react';
 import './App.css';
-// import About from './componants/About';
+import About from './componants/About';
 import Alert from './componants/Alert';
 import NavBar from './componants/NavBar';
 import TextArea from './componants/TextArea';
 
-// import {
-//   BrowserRouter as Router,
-//   Route,
-//   Switch
-// } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch
+} from "react-router-dom";
 
 
 function App() {
@@ -55,7 +55,7 @@ function App() {
 
   return (
     <>
-      {/* <Router> */}
+      <Router>
         <NavBar title="TextUtils2" mode={mode} ChangeMode={ChangeMode}/>
         
         <Alert alert={alert}/>
@@ -63,17 +63,17 @@ function App() {
         {/* <div className="container"><About/></div> */}
         <div className="container"> 
 
-            {/* <Switch>
+            <Switch>
                 <Route exact path="/about">
                   <About/>
                 </Route>
-                <Route exact path="/"> */}
+                <Route exact path="/">
                   <TextArea ShowAlert={ShowAlert} heading="Hello Write somthing here Jinil" mode={mode}/>
-                {/* </Route>
-            </Switch> */}
+                </Route>
+            </Switch>
         
         </div> 
-      {/* </Router> */}
+      </Router>
     </>
   );
 }
